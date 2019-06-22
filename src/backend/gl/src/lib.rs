@@ -57,7 +57,7 @@ pub(crate) struct GlContainer {
 }
 
 impl GlContainer {
-    #[cfg(feature = "glutin")]
+    #[cfg(all(not(target_arch = "wasm32"), feature = "glutin"))]
     fn make_current(&self) {
         // Unimplemented
     }

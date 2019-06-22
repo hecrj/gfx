@@ -46,7 +46,7 @@ impl Window {
         1
     }
 
-    pub fn resize<T>(&self, parameter: T) {}
+    pub fn resize<T>(&self, _parameter: T) {}
 }
 
 #[derive(Copy, Clone, Debug)]
