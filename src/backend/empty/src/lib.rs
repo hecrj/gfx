@@ -932,7 +932,7 @@ impl Instance {
     }
 
     #[cfg(all(feature = "winit", not(target_arch = "wasm32")))]
-    pub fn create_surface(&self, _: &winit::Window) -> Surface {
+    pub fn create_surface(&self, _: &winit::window::Window) -> Surface {
         unimplemented!()
     }
 }
