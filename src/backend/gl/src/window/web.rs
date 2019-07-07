@@ -49,7 +49,7 @@ impl Window {
     pub fn resize<T>(&self, _parameter: T) {}
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Clone, Debug)]
 pub struct Swapchain {
     pub(crate) window: Window,
     pub(crate) extent: Extent2D,
@@ -67,7 +67,7 @@ impl hal::Swapchain<B> for Swapchain {
     }
 }
 
-#[derive(Copy, Clone, Debug)]
+#[derive(Clone, Debug)]
 pub struct Surface {
     window: Window,
 }
