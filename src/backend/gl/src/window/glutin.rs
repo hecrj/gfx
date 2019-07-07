@@ -52,11 +52,10 @@ use glow::Context;
 
 use glutin;
 
-fn get_window_extent(window: &glutin::Window) -> image::Extent {
+fn get_window_extent(window: &glutin::window::Window) -> image::Extent {
     let px = window
-        .get_inner_size()
-        .unwrap()
-        .to_physical(window.get_hidpi_factor());
+        .inner_size()
+        .to_physical(window.hidpi_factor());
     image::Extent {
         width: px.width as image::Size,
         height: px.height as image::Size,
